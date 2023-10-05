@@ -34,9 +34,10 @@ const sendMessage = async (req, res = response) => {
         .then((res) => console.log(res))
         .catch((e) => console.log(e));
 
-    res.status(200).json({
+    res.status(201).json({
         ok: true,
-        message: "message ok",
+        message: "created successfuly",
+        product: `https://www.fulldealsusa.com/product/${postID}`
     });
 };
 
@@ -66,10 +67,10 @@ const sendPhoto = async (req, res = response) => {
         .then((res) => console.log(res))
         .catch((e) => console.log(e));
 
-    res.status(200).json({
+    res.status(201).json({
         ok: true,
-        message: "photo ok",
-        pid: postID,
+        message: "image posted successfuly",
+        product: `https://www.fulldealsusa.com/product/${postID}`
     });
 };
 
