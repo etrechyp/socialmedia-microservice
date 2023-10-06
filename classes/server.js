@@ -1,6 +1,7 @@
 import express from "express";
 import cors from 'cors';
 import telegram from '../routes/tg.js';
+import facebook from '../routes/fb.js'
 
 export default class Server {
     constructor() {
@@ -8,7 +9,8 @@ export default class Server {
         this.port = process.env.PORT || 3000;
 
         this.paths = {
-            telegram: '/api/tg'
+            telegram: '/api/tg',
+            facebook: '/api/fb'
         }
 
         this.middlewares();
@@ -24,6 +26,7 @@ export default class Server {
 
     routes() {
         this.app.use(this.paths.telegram, telegram);
+        this.app.use(this.paths.facebook, facebook);
     }
 
     listen() {

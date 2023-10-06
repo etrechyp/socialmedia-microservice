@@ -37,7 +37,7 @@ const sendMessage = async (req, res = response) => {
     res.status(201).json({
         ok: true,
         message: "created successfuly",
-        product: `https://www.fulldealsusa.com/product/${postID}`
+        dest: 'tg'
     });
 };
 
@@ -70,7 +70,7 @@ const sendPhoto = async (req, res = response) => {
     res.status(201).json({
         ok: true,
         message: "image posted successfuly",
-        product: `https://www.fulldealsusa.com/product/${postID}`
+        dest: 'tg'
     });
 };
 
