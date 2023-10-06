@@ -14,7 +14,7 @@ const sendMessage = async (req, res = response) => {
     let { title, postID } = req.body;
 
     let message = sprintf(
-        "🔥 %s 🔥\n\n👇👇👇👇👇 %s",
+        "🔥 %s 🔥\n\n👉🏼 %s",
         title,
         `https://www.fulldealsusa.com/product/${postID}`
     );
@@ -46,7 +46,7 @@ const sendPhoto = async (req, res = response) => {
     let { title, postID, imgURL } = req.body;
 
     let message = sprintf(
-        "🔥 %s 🔥\n\n👇👇👇👇👇 %s",
+        "🔥 %s 🔥\n\n👉🏼 %s",
         title,
         `https://www.fulldealsusa.com/product/${postID}`
     );
