@@ -14,9 +14,9 @@ const sendMessage = async (req, res = response) => {
     let { title, postID } = req.body;
 
     let message = sprintf(
-        "🔥 %s 🔥\n\n👉🏻 %s",
+        "%s \n %s",
         title,
-        `https://www.fulldealsusa.com/product/${postID}`
+        `https://thecouponhive.vercel.app/product/${postID}`
     );
     fetch(`https://api.telegram.org/bot${process.env.TG_TOKEN}/sendMessage`, {
         method: "POST",
@@ -46,9 +46,9 @@ const sendPhoto = async (req, res = response) => {
     let { title, postID, imgURL } = req.body;
 
     let message = sprintf(
-        "🔥 %s 🔥\n\n👉🏻 %s",
+        "%s \n%s",
         title,
-        `https://www.fulldealsusa.com/product/${postID}`
+        `https://thecouponhive.vercel.app/product/${postID}`
     );
     fetch(`https://api.telegram.org/bot${process.env.TG_TOKEN}/sendPhoto`, {
         method: "POST",
